@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color: rgb(24, 24, 24);
+    position: relative;
+    min-height: 100vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(43, 43, 43);
+    height: 70px;
+
+    h2{
+        color: rgb(91, 211, 91);
+        font-weight: bold;
+    }
+
+    button{
+        padding: 10px;
+        background-color: rgb(128, 74, 255);
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 11px;
+        font-weight: bold;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: left;
+    position: relative;
+    background-color: rgb(43, 43, 43);
+    height: 70px;
+
+    img{
+        width: 50px;
+        position: absolute;
+        left: 130px;
+        top: 10px;
+    }
+}
+
+main{
+    .card{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 1rem;
+        
+        .textContent{
+            margin: 0 auto;
+
+            background-color: #272a2e;
+
+            padding: 30px 40px;
+            width: 600px;
+
+            border-radius: 7px;
+            margin-top: 40px;
+        }
+    
+        h3{
+            color: rgb(212, 212, 212);
+            font-size: 20px;
+        }
+        
+        hr{
+            border: 0.5px solid rgba(128, 128, 128, 0.596);   
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+        p{
+            color: rgb(212, 212, 212);
+        }
+    
+        .btns{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+    
+            .btnEdit button{
+                border: none;
+                background-color: rgb(175, 214, 247);
+                color: white;
+                width: 90px;
+                padding: 8px;
+                border-radius: 10px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        
+            .btnLermais button{
+                background-color: rgb(18, 219, 0);
+                border: none;
+                color: white;
+                width: 90px;
+                padding: 8px;
+                border-radius: 10px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        
+            .btnDelete button{
+                background-color: rgb(255, 17, 0);
+                border: none;
+                color: white;
+                width: 90px;
+                padding: 8px;
+                border-radius: 10px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.add-Post{
+    background-color: rgb(61, 59, 59);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    min-width: 400px;
+    border-radius: 12px;
+
+    .textContent{
+        padding: 13%;
+
+        h1{
+            text-align: center;
+            font-size: 35px;
+            color: rgb(173, 173, 173);
+        }
+
+        hr{
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .field{
+            font-size: 20px;
+            border-radius: 12px;
+
+            p{
+                color: rgb(226, 226, 226);
+                font-size: 20px;
+            }
+
+            input{
+                width: 100%;
+                height: 30px;
+                font-size: 20px;
+            }
+
+            textarea{
+                width: 100%;
+                margin-top: 20px;
+                height: 80px;
+                font-size: 20px;
+            }
+
+            .errorMessage{
+                color: red;
+                font-weight: bolder;
+            }
+        }
+
+        .field:nth-child(2){
+            margin-top: 20px;
+        }
+
+        .field:nth-child(3){
+            margin-top: 20px;
+        }
+    }
+
+    .btn-post {
+        button{
+            width: 100px;
+            background-color: rgb(40, 236, 33);
+            font-weight: bolder;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 12px;
+            margin-left: 33%;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main{
+        .card{
+            
+            .textContent{
+                padding: 20px 30px;
+                width: 400px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    main{
+        .card{
+            
+            .textContent{
+                padding: 10px 20px;
+                width: 250px;
+            }
+
+            .btns{
+                .btnEdit button{
+                    width: 70px;
+                    padding: 7px;
+                    font-size: 12px;
+                }
+            
+                .btnLermais button{
+                    width: 70px;
+                    padding: 7px;
+                    font-size: 11.3px;
+                }
+            
+                .btnDelete button{
+                    width: 70px;
+                    padding: 7px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

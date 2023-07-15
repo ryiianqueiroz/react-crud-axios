@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: #181818;
+  position: relative;
   min-height: 100vh;
+}
+
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #2b2b2b;
+  height: 70px;
+}
+nav h2 {
+  color: #5bd35b;
+  font-weight: bold;
+}
+nav button {
+  padding: 10px;
+  background-color: #804aff;
+  border: none;
   color: white;
+  cursor: pointer;
+  border-radius: 11px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  background-color: #2b2b2b;
+  height: 70px;
+}
+header img {
+  width: 50px;
+  position: absolute;
+  left: 130px;
+  top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+main .card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+main .card .textContent {
+  margin: 0 auto;
+  background-color: #272a2e;
+  padding: 30px 40px;
+  width: 600px;
+  border-radius: 7px;
+  margin-top: 40px;
+}
+main .card h3 {
+  color: #d4d4d4;
+  font-size: 20px;
+}
+main .card hr {
+  border: 0.5px solid rgba(128, 128, 128, 0.596);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+main .card p {
+  color: #d4d4d4;
+}
+main .card .btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+main .card .btns .btnEdit button {
+  border: none;
+  background-color: #afd6f7;
+  color: white;
+  width: 90px;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+main .card .btns .btnLermais button {
+  background-color: #12db00;
+  border: none;
+  color: white;
+  width: 90px;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+main .card .btns .btnDelete button {
+  background-color: #ff1100;
+  border: none;
+  color: white;
+  width: 90px;
+  padding: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-Post {
+  background-color: #3d3b3b;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  min-width: 400px;
+  border-radius: 12px;
+}
+.add-Post .textContent {
+  padding: 13%;
+}
+.add-Post .textContent h1 {
+  text-align: center;
+  font-size: 35px;
+  color: #adadad;
+}
+.add-Post .textContent hr {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.add-Post .textContent .field {
+  font-size: 20px;
+  border-radius: 12px;
+}
+.add-Post .textContent .field p {
+  color: #e2e2e2;
+  font-size: 20px;
+}
+.add-Post .textContent .field input {
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+}
+.add-Post .textContent .field textarea {
+  width: 100%;
+  margin-top: 20px;
+  height: 80px;
+  font-size: 20px;
+}
+.add-Post .textContent .field .errorMessage {
+  color: red;
+  font-weight: bolder;
+}
+.add-Post .textContent .field:nth-child(2) {
+  margin-top: 20px;
+}
+.add-Post .textContent .field:nth-child(3) {
+  margin-top: 20px;
+}
+.add-Post .btn-post button {
+  width: 100px;
+  background-color: #28ec21;
+  font-weight: bolder;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  margin-left: 33%;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 700px) {
+  main .card .textContent {
+    padding: 20px 30px;
+    width: 400px;
   }
 }
+@media screen and (max-width: 425px) {
+  main .card .textContent {
+    padding: 10px 20px;
+    width: 250px;
+  }
+  main .card .btns .btnEdit button {
+    width: 70px;
+    padding: 7px;
+    font-size: 12px;
+  }
+  main .card .btns .btnLermais button {
+    width: 70px;
+    padding: 7px;
+    font-size: 11.3px;
+  }
+  main .card .btns .btnDelete button {
+    width: 70px;
+    padding: 7px;
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
